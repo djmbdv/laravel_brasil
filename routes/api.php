@@ -1,8 +1,6 @@
 <?php
-
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DataController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,9 +12,9 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/usuarios',[HomeController::class, 'usuarios']);
-Route::post('/bar/{start_date}/{end_date}',[HomeController::class, 'bar']);
-Route::post('/pizza/{start_date}/{end_date}',[HomeController::class, 'pizza']);
-Route::get('/data/{user}/{start_date}/{end_date}',[HomeController::class, 'data']);
-Route::get('/ranges',[HomeController::class, 'ranges']);
-Route::get('/clientes',[HomeController::class, 'clientes']);
+Route::get('/usuarios',[DataController::class, 'usuarios']);
+Route::post('/bar/{start_date}/{end_date}',[DataController::class, 'bar']);
+Route::post('/pizza/{start_date}/{end_date}',[DataController::class, 'pizza']);
+Route::get('/data/{user}/{start_date}/{end_date}',[DataController::class, 'data']);
+Route::get('/ranges',[DataController::class, 'ranges']);
+Route::get('/clientes',[DataController::class, 'clientes']);
