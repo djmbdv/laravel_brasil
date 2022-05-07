@@ -16,7 +16,6 @@ class DataController extends Controller
     protected $repository;
 
     function __construct() {
-        parent::__construct();
         $this->repository = new DataConsultorRepository();
     }
     

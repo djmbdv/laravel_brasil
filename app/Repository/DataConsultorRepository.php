@@ -1,10 +1,11 @@
-<?
-
+<?php
 namespace App\Repository;
 
 
 use Illuminate\Support\Facades\DB;
+
 class DataConsultorRepository{
+
     public function get_usuarios()
     {
        $users = DB::table('cao_usuario')
