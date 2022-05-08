@@ -78,7 +78,10 @@ const CardRelatorio = ({ user, date_start, date_end }) => {
                                         </span>
                                     </td>
                                     <td>
-                                        <span className="text-success">
+                                        <span className={`text-${p.receita_liquida -
+                                                        p.comissao -
+                                                        p.salario >
+                                                    0 ? "success":"danger"}`}>
                                             <i
                                                 className={`fas fa-caret-${
                                                     p.receita_liquida -
